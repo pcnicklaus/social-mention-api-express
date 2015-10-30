@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+
+    <h1>Social Search</h1>
+    <!-- <h4>Please enter multiple ingredients separated by a comma as in: 'chicken, rice, broccoli...'</h4> -->
+
+    <br>
+    <label>Please enter something you want some info about from the social realm...'
+    </label>
+    <form action="/social" method="POST">
+      <div class="form-group">
+        <input type="text" name="searchTerm" class="form-control" placeholder="Enter search term...">
+      </div>
+      <div class="form-group">
+        <input type="submit" id="search-submit" class="btn btn-default" value="search">
+      </div>
+    </form>
+
+    <p>Search Results: <strong><span class="query"></span></strong></p>
+
+    <hr> <!-- The <hr> tag defines a thematic break in an HTML page (e.g. a shift of topic) -->
+
+    <div class="results-area">
+      <ul class="results group">
+      </ul>
+    </div>
+
+  </div>
+
+{% endblock %}
